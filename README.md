@@ -15,7 +15,7 @@ COPY --from=fabianonunes/tzdb.dat:2019c /tzdb.dat /opt/java/openjdk/lib/tzdb.dat
 Para criar uma cópia do `tzdb.dat`, execute:
 
 ```bash
-docker run tzdb:latest cat /tzdb.dat > tzdb.dat
+docker run fabianonunes/tzdb.dat:latest cat /tzdb.dat > tzdb.dat
 ```
 
 ## Verificar versão do `tzdb.dat`
