@@ -9,7 +9,7 @@ Para importar o `tzdb.dat` em outra imagem, você pode utilizar o
 [_multi-stage build_](https://docs.docker.com/develop/develop-images/multistage-build/):
 
 ```Dockerfile
-COPY --from=fabianonunes/tzdb.dat:2020c /tzdb.dat /opt/java/openjdk/lib/tzdb.dat
+COPY --from=fabianonunes/tzdb.dat:2020d /tzdb.dat /opt/java/openjdk/lib/tzdb.dat
 ```
 
 Para criar uma cópia do `tzdb.dat`, execute:
