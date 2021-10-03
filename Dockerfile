@@ -5,7 +5,7 @@ RUN set -ex;                                                                    
     apt-get update;                                                                \
     apt-get install -y --no-install-recommends gawk lzip make;                     \
     # builda tarball do tzdata no formato rearguard
-    curl -sL https://data.iana.org/time-zones/releases/tzdb-2021b.tar.lz |         \
+    curl -sL https://data.iana.org/time-zones/releases/tzdb-2021c.tar.lz |         \
         tar --extract --lzip --file - --strip 1;                                   \
     make AWK=gawk rearguard_tarballs;                                              \
     # atualiza tzdb.dat via ZIUpdater da Azul
