@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jdk-11.0.4_11-slim AS tzdb_builder
+FROM eclipse-temurin:21-jdk AS tzdb_builder
 
 WORKDIR /ziupdater
 RUN set -ex;                                                                       \
