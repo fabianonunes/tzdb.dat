@@ -16,5 +16,5 @@ RUN set -ex;                                                                    
     apt-get purge --autoremove -y gawk lzip make;                                  \
     rm -rf /var/lib/apt/lists/* /ziupdater;
 
-FROM busybox:1.31.0
+FROM busybox:latest
 COPY --from=tzdb_builder /opt/java/openjdk/lib/tzdb.dat /tzdb.dat
