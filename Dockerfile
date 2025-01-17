@@ -9,9 +9,9 @@ RUN set -ex;                                                                    
         tar --extract --lzip --file - --strip 1;                                   \
     make AWK=gawk rearguard_tarballs;                                              \
     # atualiza tzdb.dat via ZIUpdater da Azul
-    curl -sL https://cdn.azul.com/tools/ziupdater1.1.1.1-jse8+7-any_jvm.tar.gz |   \
+    curl -sL https://cdn.azul.com/tools/ziupdater1.1.2.1-jse8+7-any_jvm.tar.gz |   \
         tar --extract --gzip --file -;                                             \
-    java -jar ziupdater-1.1.1.1.jar -v -l "file://$(realpath tzdata*.tar.gz)";     \
+    java -jar ziupdater-1.1.2.1.jar -v -l "file://$(realpath tzdata*.tar.gz)";     \
     # limpa arquivos desnecessários
     apt-get purge --autoremove -y gawk lzip make;                                  \
     rm -rf /var/lib/apt/lists/* /ziupdater;
