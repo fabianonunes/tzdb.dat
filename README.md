@@ -12,12 +12,6 @@ Para importar o `tzdb.dat` em outra imagem, você pode utilizar o
 COPY --from=ghcr.io/fabianonunes/tzdb.dat:latest /tzdb.dat /opt/java/openjdk/lib/tzdb.dat
 ```
 
-Para criar uma cópia do `tzdb.dat`, execute:
-
-```bash
-docker run --rm ghcr.io/fabianonunes/tzdb.dat:latest cat /tzdb.dat > tzdb.dat
-```
-
 A tag `latest` pode ser substituída pela versão desejada do tzdb.
 
 ## Verificar versão do `tzdb.dat`

@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM eclipse-temurin:21-jdk AS tzdb_builder
+FROM eclipse-temurin:21-jdk AS builder
 
 WORKDIR /ziupdater
 RUN <<EOT
@@ -19,5 +19,5 @@ RUN <<EOT
   java -jar ziupdater-1.1.2.1.jar -v -l "file://$(realpath tzdata*.tar.gz)";
 EOT
 
-FROM busybox:latest
-COPY --from=tzdb_builder /opt/java/openjdk/lib/tzdb.dat /tzdb.dat
+FROM scratch
+COPY --from=builder /opt/java/openjdk/lib/tzdb.dat /tzdb.dat
