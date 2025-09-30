@@ -13,10 +13,10 @@ RUN <<EOT
   make AWK=gawk rearguard_tarballs;
 
   # atualiza tzdb.dat via ZIUpdater da Azul
-  curl -sL https://cdn.azul.com/tools/ziupdater1.1.2.1-jse8+7-any_jvm.tar.gz \
+  curl -sL https://cdn.azul.com/tools/ziupdater1.1.3.1-jse8+7-any_jvm.tar.gz \
     | tar --extract --gzip --file -;
 
-  java -jar ziupdater-1.1.2.1.jar -v -l "file://$(realpath tzdata*.tar.gz)";
+  java -jar ziupdater-1.1.3.1.jar -v -l "file://$(realpath tzdata*.tar.gz)";
 EOT
 
 FROM scratch
