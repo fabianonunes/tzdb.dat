@@ -1,7 +1,7 @@
 # tzdb.dat
 
 Imagem Docker com o banco de dados de fusos horários da IANA compilados no formato `tzdb.dat`
-compatível com uma JDK >= 8 (inclusive OpenJDK).
+compatível com uma JDK >= 8.
 
 A compilação é feita durante o build pelo [ZIUpdater](https://www.azul.com/products/open-source-tools/ziupdater-time-zone-tool/) da Azul.
 
