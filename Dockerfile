@@ -8,7 +8,7 @@ RUN <<EOT
   apt-get install --yes --no-install-recommends gawk lzip make;
 
   # builda tarball do tzdata no formato rearguard
-  curl --silent --location https://data.iana.org/time-zones/releases/tzdb-2025b.tar.lz \
+  curl --silent --location https://data.iana.org/time-zones/releases/tzdb-2025c.tar.lz \
     | tar --extract --lzip --file - --strip 1;
   make AWK=gawk rearguard_tarballs;
 
